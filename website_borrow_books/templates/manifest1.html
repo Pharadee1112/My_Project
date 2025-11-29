@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart of labye</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background-color: #eaf7f4;
+        }
+
+        .navbar {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background-color: #eaf7f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: -5px;
+            width: 95%;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* -----------------------
+        borrow book page
+        ----------------------- */
+
+        .book-card {
+            display: flex;
+            gap: 20px;
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 12px;
+            align-items: flex-start;
+            margin: 120px 40px 20px 40px;
+        }
+
+        .book-cover {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .book-info h3 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        .book-info .desc {
+            margin: 0 0 8px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .book-info .main-desc {
+            color: #555;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .topic {
+            margin-left: 30px;
+        }
+
+        /* Responsive: หน้าเล็กเหลือ 1 คอลัมน์ */
+        @media (max-width: 768px) {
+            .book-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .book-cover {
+            margin-bottom: 15px;
+        }
+
+        .m5 {
+            margin-top: 30px !important;
+        }
+
+        .blocktail-list {
+            margin-bottom: 20px;
+        }
+
+        .promotion-block li span {
+            color: #003a70;
+            font-weight: 500;
+            font-size: 17px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .promotion-block li {
+            font-size: 15px;
+            line-height: 1.7em;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .promotion-block li span {
+            color: #003a70;
+            font-weight: 500;
+            font-size: 17px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .promotion-block .item-tag {
+            font-weight: 500;
+            font-size: 21px;
+            height: 30px;
+            width: 140px;
+            padding: 5px;
+            top: -2px;
+            left: 75px;
+        }
+
+        .tag-discount {
+            font-weight: 500;
+            font-size: 21px;
+            height: 30px;
+            width: 140px;
+            padding: 5px;
+            top: -2px;
+            left: 75px;
+        }
+
+        .star {
+            margin-left: 35px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            margin-left: 35px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 28px;
+        }
+
+        .view-btn {
+            background-color: #fff8ab;
+            border: none;
+            padding: 12px 26px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">✨Library</div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('books') }}">Books</a></li>
+        </ul>
+    </div>
+
+    <div class="book-card">
+        <img src="https://cdn-local.mebmarket.com/meb/server1/259148/Thumbnail/book_detail_large.gif?2"
+            alt="manifest1-Book" class="book-cover">
+        <div class="book-info">
+            <h1 class="topic">Manifest Book</h1>
+            <div class="promotion-block m5">
+                <ul class="blockdetail-list">
+                    <li>
+                        <span>Promotion</span>
+                        <div class="tag-promotion">
+                            Get an extra 5% off when returned 1 day early
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class=star>⭐⭐⭐⭐⭐</div>
+            <div class="price">
+                30.00 THB
+            </div>
+            <a href="{{ url_for('borrowpages') }}">
+                <button class="view-btn">Add to cart</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

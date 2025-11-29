@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Form</title>
+
+    <style>
+        body {
+            background: #eaf7f4;
+            font-family: "Inter", sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 50px 70px 50px 50px;
+            border-radius: 12px;
+            width: 500px;
+            margin-right: 50px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        #this-book {
+            padding-block: 8px;
+            background-color: white;
+            border: 1px solid #cccccf;
+            border-radius: 8px;
+            padding-left: 8px;
+            width: 106%;
+        }
+
+        .book {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 98%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            padding-right: 30px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 106%;
+            padding: 9px;
+            border: none;
+            background: #fff8ab;
+            color: rgb(9, 9, 9);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Borrow a Book</h2>
+        <form action="{{ url_for('submit') }}" method="POST">
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+
+            <lable class="book">book</lable>
+            <select id="this-book" name="thisbook">
+                <option value="Longlabye">LongLabye book</option>
+                <option value="The let them theory">The let them theory book</option>
+                <option value="Manifest Book">Manifest book</option>
+                <option value="Manifest in Action Book">Manifest in Action book</option>
+                <option value="The Science of Obesity: Decoding the Art of Weight Loss for Lasting Health book">The Science of Obesity: Decoding the Art of Weight Loss for Lasting Health book book</option>
+                <option value="Do it 1% more than them">Do it 1% more than them book</option>
+                <option value="Gone Fishing with Buffett">Gone Fishing with Buffett book</option>
+                <option value="Psychology of money">Psychology of money book</option>
+                <option value="Life is short, but there's still time to make each day count for yourself">Life is short, but there's still time to make each day count for yourself book</option>
+            </select>
+
+            <label>Borrow Date</label>
+            <input type="date" name="borrow_date" required>
+
+            <label>Your email</label>
+            <input type="email" name="email" placeholder="email" required>
+
+            <button type="submit">Borrow</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

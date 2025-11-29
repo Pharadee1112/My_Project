@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <nav class="navbar fixed">
+        <div class="logo">✨Library</div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('books') }}">Books</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to the Library!</h1>
+            <p>Explore our collection and find your next read.</p>
+        </div>
+    </section>
+
+    <div class="topic1">✨Recommended Books</div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1110.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>LONGLaBYE Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    Young artist QLER from What The Duck steps into the role of a writer, sharing his struggles with self-doubt through warm, heartfelt words paired with ToddyInTheMood’s illustrations. Together, they create a comforting story that encourages readers to see the beauty in what they create.
+                </p>
+                <a href="{{ url_for('labye') }}">
+                    <button class="view-btn">check out book</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="topic2">✅ Psychology & Personal Development</div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1116.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>The let them theory Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    A recommended self-help book that guides readers to let go of the need to control other people's behaviors and thoughts. By applying the “Let Them” principle to accept others as they are, and the “Let Me” principle to focus on self-development, readers learn to preserve their emotional energy and shift attention toward personal growth.
+                </p>
+                <a href="{{ url_for('the_let_them') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1124.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>Manifest Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    A hugely popular personal development guide that can transform your life. Whether seeking love, career success, a dream home, or inner peace, this book teaches you to achieve your goals through seven powerful steps—from clarity and courage to gratitude, inspiration, and trust in the universe.
+                </p>
+                <a href="{{ url_for('manifest1') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1118.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>Manifest dive deeper Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    A powerful guide that proves you truly can transform your life. “Manifest: Dive Deeper” takes you through every step of the manifestation journey—helping you unlock your unlimited potential, create lasting and sustainable change, and turn your dreams into reality. In this book, Roxie expands upon each stage of the manifestation process, offering clear, actionable techniques that teach you how to tap into your inner power with confidence. Each chapter includes simple yet inspiring activities designed to cultivate self-awareness, reflection, and personal growth, strengthening your manifestation practice and empowering you from within.
+                </p>
+                <a href="{{ url_for('manifest2') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1120.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>The Science of Obesity: Decoding the Art of Weight Loss for Lasting Health book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    Obesity is a hidden global threat, affecting health and longevity. Dr. Jason Fung reveals the real causes—beyond carbs, fats, and sugar—and exposes insulin as the key culprit. This book offers five evidence-based steps to lose weight and achieve lasting health.
+                </p>
+                <a href="{{ url_for('fatbook') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1125.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>Do it 1% more than them Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    “Psychology 1%” reveals the subtle skills and strategies top achievers use to influence, connect, and succeed. Learn the secrets of persuasive communication, charm, and leadership that can transform you from where you are to becoming an extraordinary, high-impact individual.
+                </p>
+                <a href="{{ url_for('do1') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="topic2">💲 Finance & Investment</div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1117.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>Gone Fishing with Buffett Book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    A beginner-friendly book that introduces the core principles of Value Investing, inspired by legendary investor Warren Buffett. Sean Seah, the author of “Fishing with Buffett,” learned and applied these principles himself—successfully building his own wealth. In this book, he explains Value Investing in a simple, step-by-step way, making it perfect for newcomers who want to understand how to make their money work for them.
+                </p>
+                <a href="{{ url_for('fishing') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="{{ url_for('static', filename='images/IMG_1123.PNG') }}" class="book-cover">
+            <div class="book-info">
+                <h3>Psychology of money book</h3>
+                <p class="desc">Description</p>
+                <p class="main-desc">
+                    Money: a blessing and a curse that shapes our lives. This book explores the human side of finance, showing that knowing isn’t enough—action is key. Learn how to make decisions that lead to balance, freedom, and real results.
+                </p>
+                <a href="{{ url_for('money') }}">
+                    <button class="view-btn">Check out a book</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <div class="topic2">☺️ Chill guy</div>
+
+        <div class="book-grid">
+            <div class="book-card">
+                <img src="{{ url_for('static', filename='images/IMG_1121.PNG') }}"  class="book-cover">
+                <div class="book-info">
+                    <h3>Life is short, but there's still time to make each day count for yourself book</h3>
+                    <p class="desc">Description</p>
+                    <p class="main-desc">
+                        A gentle guide for lifelong “people pleasers” who carry the weight of others’ expectations. This book encourages you to release burdens, reconnect with yourself, and recharge without guilt. It reminds you that life becomes lighter when you learn to care for yourself, slow down, and embrace imperfection—because healing is part of living your one precious life.
+                    </p>
+                <a href="{{ url_for('chill') }}">
+                        <button class="view-btn">Check out a book</button>
+                    </a>               
+                </div>
+            </div>
+        </div>
+</body>
+</html>
